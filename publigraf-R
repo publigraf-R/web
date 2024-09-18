@@ -1,0 +1,568 @@
+<html><head><base href="https://publigraf.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Publigraf: Especialistas en regalos empresariales personalizados. Descubre nuestra amplia gama de productos para fortalecer tu marca.">
+<title>Publigraf - Regalos Empresariales de Calidad</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<style>
+  :root {
+    --primary-color: #0056b3;
+    --secondary-color: #f8f9fa;
+    --accent-color: #ffc107;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #F0F4F8; /* New background color */
+    margin: 0;
+    padding: 0;
+  }
+  .hero {
+    background: linear-gradient(-45deg, #ff5733, #33ff57, #3357ff, #f0ff33);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes textColorChange {
+    0% { color: #ff5733; }
+    25% { color: #33ff57; }
+    50% { color: #3357ff; }
+    75% { color: #f0ff33; }
+    100% { color: #ff5733; }
+  }
+  .brand-title {
+    font-size: 4em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    animation: textColorChange 10s infinite;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  .tagline {
+    font-size: 1.5em;
+    animation: textColorChange 10s infinite;
+  }
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 0;
+    width: 100%;
+  }
+  .navbar-brand, .nav-link {
+    color: white !important;
+  }
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+  .contact-section {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+  }
+  .contact-input {
+    width: 70%;
+    padding: 8px;
+    font-size: 1em;
+    margin: 10px 0;
+  }
+  .contact-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  /* New styles for blog and product sections */
+  #productos .card {
+    background: linear-gradient(270deg, #FFCDD2, #E1BEE7, #BBDEFB, #C8E6C9);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite;
+    min-height: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  #blog .card {
+    background: linear-gradient(270deg, #FFD54F, #FF8A65, #81D4FA, #A5D6A7);
+    background-size: 600% 600%;
+    animation: gradientAnimationBlog 10s ease infinite;
+    min-height: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Add keyframe animation for "Blog y Noticias" */
+  @keyframes gradientAnimationBlog {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* New styles for testimonials section */
+  #testimonios .card {
+    background: linear-gradient(270deg, #FFECB3, #FFAB91, #80CBC4, #CFD8DC);
+    background-size: 600% 600%;
+    animation: gradientAnimationTestimonials 10s ease infinite;
+    min-height: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Add keyframe animation for "Testimonios de Clientes" */
+  @keyframes gradientAnimationTestimonials {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .card {
+    margin: 15px 0;
+  }
+
+  .product-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  .product-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .product-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  #productos .card {
+    min-width: 320px;
+    margin: 0 10px;
+    flex: 0 0 auto;
+  }
+
+  .prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+    z-index: 1;
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+
+  .view-all-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .view-all-btn {
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  .view-all-btn:hover {
+    background-color: #283593;
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Publigraf</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#soporte">Soporte</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1 class="brand-title">Publigraf</h1>
+    <p class="tagline">regalos empresariales que fortalecen tu marca</p>
+  </div>
+</header>
+
+<main>
+  <section id="productos" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Nuestros Productos</h2>
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <input type="text" id="search" class="form-control" placeholder="Buscar productos...">
+        </div>
+        <div class="col-md-4">
+          <select id="category" class="form-select">
+            <option value="">Todas las categorías</option>
+            <option value="oficina">Oficina</option>
+            <option value="tecnologia">Tecnología</option>
+            <option value="eco">Eco-friendly</option>
+          </select>
+        </div>
+      </div>
+      <div class="product-carousel-container">
+        <button class="prev-btn">⟨</button>
+        <div class="product-carousel" id="product-list">
+          <!-- Los productos se cargarán dinámicamente aquí -->
+        </div>
+        <button class="next-btn">⟩</button>
+      </div>
+      <div class="view-all-container">
+        <a href="/todos-los-productos" class="view-all-btn">Ver todos los productos</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Blog y Noticias</h2>
+      <div class="row" id="blog-posts">
+        <!-- Las entradas del blog se cargarán dinámicamente aquí -->
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonios" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Testimonios de Clientes</h2>
+      <div class="row" id="testimonial-list">
+        <!-- Los testimonios se cargarán dinámicamente aquí -->
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contáctanos</h2>
+      <form id="contact-form">
+        <div class="mb-3">
+          <input type="text" class="form-control" id="name" placeholder="Nombre" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" id="email" placeholder="Email" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" id="message" rows="4" placeholder="Mensaje" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h5>Publigraf</h5>
+        <p>Especialistas en regalos empresariales desde 2005</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Enlaces Rápidos</h5>
+        <ul class="list-unstyled">
+          <li><a href="#productos" class="text-white">Productos</a></li>
+          <li><a href="#contacto" class="text-white">Contacto</a></li>
+          <li><a href="#blog" class="text-white">Blog</a></li>
+          <li><a href="#testimonios" class="text-white">Testimonios</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Síguenos</h5>
+        <a href="https://facebook.com/publigraf" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/publigraf" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/publigraf" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/company/publigraf" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="chat-widget">
+  <button class="btn btn-primary" onclick="toggleChat()">
+    <i class="fas fa-comments"></i> Chat en vivo
+  </button>
+  <div id="chat-window" style="display:none;">
+    <!-- Aquí iría el widget de chat en vivo -->
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+// Datos de ejemplo para productos
+const products = [
+  { id: 1, name: 'Agenda Ejecutiva', category: 'oficina', price: 25.99, image: 'agenda.jpg', description: 'Agenda de cuero con tu logo grabado' },
+  { id: 2, name: 'Power Bank', category: 'tecnologia', price: 35.50, image: 'powerbank.jpg', description: 'Cargador portátil de 10000mAh personalizable' },
+  { id: 3, name: 'Botella Reutilizable', category: 'eco', price: 15.75, image: 'botella.jpg', description: 'Botella de acero inoxidable con diseño personalizado' },
+];
+
+// Función para cargar productos
+function loadProducts(filtered = products) {
+  const productList = document.getElementById('product-list');
+  productList.innerHTML = '';
+  filtered.forEach(product => {
+    const productCard = `
+      <div class="card product-card">
+        <img src="${product.image}" class="card-img-top" alt="${product.name}" width="300" height="200">
+        <div class="card-body">
+          <h5 class="card-title">${product.name}</h5>
+          <p class="card-text">${product.description}</p>
+          <p class="card-text">$${product.price.toFixed(2)}</p>
+          <button class="btn btn-primary" onclick="addToCart(${product.id})">Añadir al carrito</button>
+        </div>
+      </div>
+    `;
+    productList.innerHTML += productCard;
+  });
+}
+
+// Función para filtrar productos
+function filterProducts() {
+  const searchTerm = document.getElementById('search').value.toLowerCase();
+  const category = document.getElementById('category').value;
+  const filtered = products.filter(product => 
+    product.name.toLowerCase().includes(searchTerm) &&
+    (category === '' || product.category === category)
+  );
+  loadProducts(filtered);
+}
+
+// Event listeners para filtros
+document.getElementById('search').addEventListener('input', filterProducts);
+document.getElementById('category').addEventListener('change', filterProducts);
+
+// Función para añadir al carrito (a implementar)
+function addToCart(productId) {
+  console.log(`Producto ${productId} añadido al carrito`);
+  // Aquí iría la lógica para añadir al carrito
+}
+
+// Función para manejar el envío del formulario de contacto
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  console.log(`Formulario enviado: ${name}, ${email}, ${message}`);
+  // Aquí iría la lógica para enviar el formulario
+  alert('Gracias por tu mensaje. Te contactaremos pronto.');
+});
+
+// Función para cargar entradas de blog (ejemplo)
+function loadBlogPosts() {
+  const blogPosts = [
+    { title: 'Tendencias en Regalos Corporativos 2023', date: '2023-05-15', excerpt: 'Descubre las últimas tendencias en regalos empresariales para este año.' },
+    { title: 'Cómo Elegir el Regalo Perfecto para tus Clientes', date: '2023-04-28', excerpt: 'Guía práctica para seleccionar regalos corporativos que impresionen.' },
+  ];
+  const blogContainer = document.getElementById('blog-posts');
+  blogPosts.forEach(post => {
+    const postHtml = `
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">${post.title}</h5>
+            <p class="card-text">${post.excerpt}</p>
+            <p class="text-muted">${post.date}</p>
+            <a href="#" class="btn btn-outline-primary">Leer más</a>
+          </div>
+        </div>
+      </div>
+    `;
+    blogContainer.innerHTML += postHtml;
+  });
+}
+
+// Función para cargar testimonios (ejemplo)
+function loadTestimonials() {
+  const testimonials = [
+    { name: 'Juan Pérez', company: 'Tech Solutions', text: 'Los regalos de Publigraf impresionaron a nuestros clientes. ¡Excelente calidad!' },
+    { name: 'María González', company: 'Marketing Pro', text: 'El servicio al cliente es excepcional. Siempre encuentro lo que busco.' },
+  ];
+  const testimonialList = document.getElementById('testimonial-list');
+  testimonials.forEach(testimonial => {
+    const testimonialHtml = `
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">"${testimonial.text}"</p>
+            <footer class="blockquote-footer">${testimonial.name} de <cite title="Source Title">${testimonial.company}</cite></footer>
+          </div>
+        </div>
+      </div>
+    `;
+    testimonialList.innerHTML += testimonialHtml;
+  });
+}
+
+// Función para toggle del chat
+function toggleChat() {
+  const chatWindow = document.getElementById('chat-window');
+  chatWindow.style.display = chatWindow.style.display === 'none' ? 'block' : 'none';
+}
+
+// Replace the existing carousel script with this new one
+function initializeCarousel() {
+  const carousel = document.querySelector('.product-carousel');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  const scrollStep = 320; // Tamaño del desplazamiento (ajusta según el ancho de los recuadros)
+  let autoScrollInterval; // Variable para controlar el desplazamiento automático
+
+  if (!carousel || !prevBtn || !nextBtn) {
+    console.error('One or more carousel elements are missing');
+    return;
+  }
+
+  // Función para mover el carrusel hacia la derecha
+  function scrollNext() {
+    carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
+    if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - scrollStep) {
+      setTimeout(() => {
+        carousel.scrollTo({ left: 0, behavior: 'auto' });
+      }, 500);
+    }
+  }
+
+  // Función para mover el carrusel hacia la izquierda
+  function scrollPrev() {
+    if (carousel.scrollLeft === 0) {
+      carousel.scrollTo({ left: carousel.scrollWidth, behavior: 'auto' });
+      setTimeout(() => {
+        carousel.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+      }, 50);
+    } else {
+      carousel.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+    }
+  }
+
+  // Desplazamiento automático
+  function startAutoScroll() {
+    autoScrollInterval = setInterval(scrollNext, 3000); // Desplazamiento cada 3 segundos
+  }
+
+  // Detener desplazamiento automático cuando el usuario interactúa
+  function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+  }
+
+  // Eventos para los botones manuales
+  nextBtn.addEventListener('click', () => {
+    scrollNext();
+    stopAutoScroll(); // Detener el desplazamiento automático cuando se hace clic
+  });
+
+  prevBtn.addEventListener('click', () => {
+    scrollPrev();
+    stopAutoScroll(); // Detener el desplazamiento automático cuando se hace clic
+  });
+
+  // Detener el desplazamiento automático cuando el usuario interactúa con el carrusel
+  carousel.addEventListener('mouseenter', stopAutoScroll);
+  carousel.addEventListener('touchstart', stopAutoScroll);
+
+  // Reiniciar el desplazamiento automático cuando el usuario deja de interactuar
+  carousel.addEventListener('mouseleave', startAutoScroll);
+  carousel.addEventListener('touchend', startAutoScroll);
+
+  // Iniciar el desplazamiento automático
+  startAutoScroll();
+}
+
+// Inicializar el carrusel cuando el DOM esté completamente cargado
+document.addEventListener('DOMContentLoaded', () => {
+  try {
+    initializeCarousel();
+    loadProducts();
+    loadBlogPosts();
+    loadTestimonials();
+  } catch (error) {
+    console.error('Error initializing page:', error);
+  }
+});
+
+// Inicialización de Stripe (ejemplo)
+const stripe = Stripe('tu_clave_publica_de_stripe');
+
+// Función para procesar el pago (a implementar)
+function processPayment() {
+  // Aquí iría la lógica para procesar el pago con Stripe
+  console.log('Procesando pago...');
+}
+</script>
+</body>
+</html>
